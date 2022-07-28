@@ -19,6 +19,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
+
 app.use('/api', routes)
 
 const PORT = parseInt(process.env.PORT) || 5000;
