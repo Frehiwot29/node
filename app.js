@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const { config } = require('dotenv')
 const cors = require('cors');
 config()
-mongoose.connect('mongodb://localhost:27017/fre_productDB', (err) => {
+mongoose.connect(process.env.MONGO_DB_URL, (err) => {
     if (err) {
         console.log('DB Error: ', err.message);
     } else {
